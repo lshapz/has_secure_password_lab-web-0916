@@ -1,0 +1,6 @@
+<%= form_tag('/sessions') do %>
+<%= text_field_tag "name", "name", placeholder: "name" %>
+<%= label_tag :name, "name" %>
+<%= password_field_tag(:password) %>
+<%= submit_tag "Submit"%>
+<% end %>
