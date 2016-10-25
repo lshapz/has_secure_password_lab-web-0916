@@ -1,6 +1,10 @@
-<%= form_tag('/sessions') do %>
-<%= text_field_tag "name", "name", placeholder: "name" %>
-<%= label_tag :name, "name" %>
-<%= password_field_tag(:password) %>
-<%= submit_tag "Submit"%>
+<%= form_for @user, url: login_path, method: :post do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+
+  <%= f.submit "log in" %>
+  Or <%= link_to(controller: 'users', action: 'new') { 'sign up' } %>
 <% end %>
