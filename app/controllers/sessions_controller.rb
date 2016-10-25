@@ -12,10 +12,10 @@ class SessionsController < ApplicationController
     if user
       session[:user_id] = user.id
       @user = user
-      redirect_to controller: 'welcome', action: 'home'
+      redirect_to ('/')
     else
-       redirect_to(controller: 'sessions', action: 'new')
-      end
+       redirect_to('login')
+    end
   end
 
 
